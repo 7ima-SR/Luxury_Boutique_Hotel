@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Search, CalendarDays } from "lucide-react";
 import { useStore } from "../store/useStore";
+import Logo from "./Logo";
 
 const links = [
   { to: "/rooms", label: "Stay" },
@@ -53,8 +54,8 @@ export default function Navbar() {
             <button className="lg:hidden p-2 -ml-2" aria-label="Open menu" onClick={() => setOpen(true)}>
               <Menu size={20} strokeWidth={1.5} />
             </button>
-            <Link to="/" className="serif text-[26px] tracking-[0.28em] font-medium pl-1" aria-label="LUMA home">
-              LUMA
+            <Link to="/" className="flex items-center pl-1" aria-label="LUMA home">
+              <Logo markSize={26} textSize={23} />
             </Link>
             <div className="hidden lg:flex items-center gap-7">
               {links.map((l) => (
@@ -109,7 +110,7 @@ export default function Navbar() {
             aria-label="Menu"
           >
             <div className="flex items-center justify-between px-5 h-[72px]">
-              <span className="serif text-[24px] tracking-[0.28em]">LUMA</span>
+              <Logo markSize={24} textSize={22} />
               <button aria-label="Close menu" onClick={() => setOpen(false)} className="p-2"><X size={22} strokeWidth={1.25} /></button>
             </div>
             <div className="flex-1 flex flex-col justify-center px-8 gap-1">

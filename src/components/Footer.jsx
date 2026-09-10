@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 pt-16 pb-8">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <p className="serif text-[34px] tracking-[0.24em]">LUMA</p>
+            <Logo markSize={32} textSize={30} />
             <p className="serif italic text-[20px] text-warmwhite/80 mt-3 font-light">Stay somewhere worth remembering.</p>
             <p className="text-[13px] text-warmwhite/60 mt-5 max-w-sm leading-relaxed">
               Twenty-four rooms on a quiet corner of the coast. Stone, sea, and slower mornings — kept deliberately small.
